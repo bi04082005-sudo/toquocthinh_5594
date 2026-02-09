@@ -1,5 +1,3 @@
 # toquocthinh_5594
 toquocthinh_2380605594
 
-
-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
