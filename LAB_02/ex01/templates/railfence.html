@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RailFence Cipher</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2 style="text-align:center;margin-top:20px;">RAILFENCE CIPHER</h2>
+
+<hr>
+
+<h4 style="color:blue">ENCRYPTION</h4>
+
+<form method="POST" action="/railfence/encrypt">
+
+<label>Plain Text</label>
+<input class="form-control" name="plain_text">
+
+<label>Key</label>
+<input class="form-control" name="key">
+
+<br>
+
+<button class="btn btn-primary">Encrypt</button>
+
+</form>
+
+{% if encrypted_text %}
+<div class="alert alert-info mt-3">
+Encrypted Text: {{encrypted_text}}
+</div>
+{% endif %}
+
+<hr>
+
+<h4 style="color:blue">DECRYPTION</h4>
+
+<form method="POST" action="/railfence/decrypt">
+
+<label>Cipher Text</label>
+<input class="form-control" name="cipher_text">
+
+<label>Key</label>
+<input class="form-control" name="key">
+
+<br>
+
+<button class="btn btn-success">Decrypt</button>
+
+</form>
+
+{% if decrypted_text %}
+<div class="alert alert-success mt-3">
+Decrypted Text: {{decrypted_text}}
+</div>
+{% endif %}
+
+</div>
+
+</body>
+</html>
